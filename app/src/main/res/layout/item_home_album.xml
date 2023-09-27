@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/iv_item_album"
+        android:layout_width="@dimen/size_item_album"
+        android:layout_height="@dimen/size_item_album"
+        android:src="@drawable/img_album_exp2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/iv_item_album_play"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="12dp"
+        android:src="@drawable/widget_black_play"
+        app:layout_constraintBottom_toBottomOf="@id/iv_item_album"
+        app:layout_constraintEnd_toEndOf="@id/iv_item_album"/>
+
+    <TextView
+        android:id="@+id/tv_item_album_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        style="@style/TextStyleItemTitle"
+        app:layout_constraintTop_toBottomOf="@id/iv_item_album"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_item_album_singer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextStyleItemSinger"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_album_title"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

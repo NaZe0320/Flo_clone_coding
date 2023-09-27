@@ -1,14 +1,11 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
     compileSdk 31
-
-    viewBinding {
-        enabled true
-    }
 
     defaultConfig {
         applicationId "com.example.flo"
@@ -34,6 +31,11 @@ android {
         jvmTarget = '1.8'
     }
     namespace 'com.example.flo'
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
 }
 
 dependencies {
