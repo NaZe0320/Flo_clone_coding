@@ -132,7 +132,7 @@
             android:id="@+id/section_home_music"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/margin_home_section"
+            android:paddingVertical="@dimen/margin_home_section"
             app:layout_constraintTop_toBottomOf="@id/section_home_pannel">
 
             <TextView
@@ -182,6 +182,7 @@
                 android:text="해외"
                 android:textSize="14sp"
                 android:textColor="@color/black"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
@@ -194,6 +195,7 @@
                 android:orientation="horizontal"
                 tools:listitem="@layout/item_home_album"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_home_music_album"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -219,7 +221,7 @@
             android:id="@+id/section_home_potcast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/margin_home_section"
+            android:paddingVertical="@dimen/margin_home_section"
             app:layout_constraintTop_toBottomOf="@id/section_home_viewpager">
 
             <TextView
@@ -248,7 +250,7 @@
             android:id="@+id/section_home_video"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/margin_home_section"
+            android:paddingVertical="@dimen/margin_home_section"
             app:layout_constraintTop_toBottomOf="@id/section_home_potcast">
 
             <TextView

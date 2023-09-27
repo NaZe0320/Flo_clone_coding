@@ -4,6 +4,7 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginStart">@dimen/margin_home_section</item>
     </style>
 
     <style name="TextStyleItemTitle" parent="Widget.AppCompat.TextView">
