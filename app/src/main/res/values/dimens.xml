@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="size_social_icon">24dp</dimen>
-    <dimen name="size_item_album">200dp</dimen>
+    <dimen name="size_item_album">140dp</dimen>
 
     <dimen name="margin_home_section">16dp</dimen>
 </resources>
