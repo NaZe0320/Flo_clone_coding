@@ -17,16 +17,17 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val albumAdapter = HomeAdapter(1)
-        val potCastAdapter = HomeAdapter(2)
-        val videoAdapter = HomeAdapter(3)
 
-        binding.rvHomeMusic.adapter = albumAdapter
-        binding.rvHomePotcast.adapter = potCastAdapter
-        binding.rvHomeVideo.adapter = videoAdapter
+        binding.homeAlbumImgIv1.setOnClickListener {
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm , AlbumFragment())
+                .commitAllowingStateLoss()
+        }
 
         return binding.root
     }
+
+
 }
