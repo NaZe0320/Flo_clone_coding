@@ -23,7 +23,7 @@ class AlbumFragment : Fragment() {
     ): View? {
         binding = FragmentAlbumBinding.inflate(inflater,container,false)
 
-        binding.albumBackIv.setOnClickListener {
+        binding.ivAlbumBack.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, HomeFragment())
                 .commitAllowingStateLoss()
@@ -37,9 +37,5 @@ class AlbumFragment : Fragment() {
         }.attach()
 
         return binding.root
-    }
-
-    private fun makeToast(title: String) {
-        Toast.makeText(activity,title, Toast.LENGTH_SHORT).show()
     }
 }

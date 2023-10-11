@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.example.HomeAdapter
 import com.example.flo.databinding.FragmentHomeBinding
-import com.example.model.ItemData
 
 class HomeFragment : Fragment() {
 
@@ -26,6 +24,17 @@ class HomeFragment : Fragment() {
                 .replace(R.id.main_frm , AlbumFragment())
                 .commitAllowingStateLoss()
         }
+
+        val panelAdapter = BannerViewPagerAdapter(this)
+        panelAdapter.addFragment(BannerFragment(R.drawable.img_first_album_default))
+        panelAdapter.addFragment(BannerFragment(R.drawable.img_album_exp3))
+        panelAdapter.addFragment(BannerFragment(R.drawable.img_album_exp4))
+
+        binding.vpPanelBanner.adapter = panelAdapter
+        binding.vpPanelBanner.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        binding.indicatorPanel.setViewPager(binding.vpPanelBanner)
+        panelAdapter.registerAdapterDataObserver(binding.indicatorPanel.adapterDataObserver);
 
         val bannerAdapter = BannerViewPagerAdapter(this)
         bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp))
