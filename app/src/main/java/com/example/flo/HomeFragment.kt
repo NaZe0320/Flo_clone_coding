@@ -35,6 +35,7 @@ class HomeFragment : Fragment() {
 
         setPanel()
 
+
         val bannerAdapter = BannerViewPagerAdapter(this)
         bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp))
         bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp2))
