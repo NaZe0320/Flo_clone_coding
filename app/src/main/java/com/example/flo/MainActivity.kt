@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         initBottomNavigation()
 
-        val song = Song(binding.tvMainMiniPlayerTitle.text.toString(), binding.tvMainMiniPlayerSinger.text.toString())
+        val song = Song(binding.tvMainMiniPlayerTitle.text.toString(), binding.tvMainMiniPlayerSinger.text.toString(),0,60 )
 
         binding.mainPlayerCl.setOnClickListener {
             val intent = Intent(this, SongActivity::class.java)
@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,SongActivity::class.java)
             intent.putExtra("title", song.title)
             intent.putExtra("singer",song.singer)
+            intent.putExtra("second",song.second)
+            intent.putExtra("playTime",song.playTime)
             startActivity(intent)
         }
 

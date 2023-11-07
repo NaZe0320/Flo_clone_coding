@@ -20,29 +20,31 @@ class SongActivity: AppCompatActivity() {
         initSong()
         setPlayer(song)
 
+
         binding.btnSongDown.setOnClickListener {
             finish()
         }
 
         binding.ivSongMiniplayer.setOnClickListener {
-            setPlayerStatus(false)
+            setPlayerStatus(true)
         }
 
         binding.ivSongPause.setOnClickListener {
-            setPlayerStatus(true)
+            setPlayerStatus(false)
         }
     }
 
     private fun setPlayerStatus (isPlaying : Boolean){
+        Log.d("SongTest","$isPlaying")
         song.isPlaying = isPlaying
         timer.isPlaying = isPlaying
 
         if(isPlaying){
-            binding.ivSongMiniplayer.visibility = View.VISIBLE
-            binding.ivSongPause.visibility = View.GONE
-        } else {
             binding.ivSongMiniplayer.visibility = View.GONE
             binding.ivSongPause.visibility = View.VISIBLE
+        } else {
+            binding.ivSongMiniplayer.visibility = View.VISIBLE
+            binding.ivSongPause.visibility = View.GONE
         }
     }
 
@@ -59,7 +61,7 @@ class SongActivity: AppCompatActivity() {
                 intent.getStringExtra("singer")!!,
                 intent.getIntExtra("second",0),
                 intent.getIntExtra("playTime",0),
-                intent.getBooleanExtra("isPlaying",false)
+                intent.getBooleanExtra("isPlaying",true)
             )
         }
         startTimer()
